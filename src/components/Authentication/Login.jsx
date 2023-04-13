@@ -2,7 +2,7 @@ import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, V
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 const Login = () => {
     const [show, setShow] = useState(false);
     const handleClick = () => setShow(!show);
@@ -33,12 +33,12 @@ const Login = () => {
                 };
 
                 const { data } = await axios.post(
-                    "/api/user/sendOTP",
+                    `${BASE_URL}/api/user/sendOTP`,
                     { phone },
                     config
                 );
 
-                // console.log(JSON.stringify(data));
+                console.log(JSON.stringify(data));
                 setIsOTPSend(data.status);
             } catch (error) {
                 toast({
@@ -97,7 +97,7 @@ const Login = () => {
                 await localStorage.setItem("userInfo", JSON.stringify(data));
                 setLoading(false);
                 history.push("/chats");
-
+                window.location.reload();
             } catch (error) {
                 toast({
                     title: "Error Occured!",
