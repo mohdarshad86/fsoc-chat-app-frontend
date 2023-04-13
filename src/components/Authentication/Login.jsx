@@ -82,7 +82,7 @@ const Login = () => {
                 };
 
                 const { data } = await axios.post(
-                    `${BASE_URL}/api/user/verifyOTP`${BASE_URL},
+                    `${BASE_URL}/api/user/verifyOTP`,
                     { phone, enteredOTP: otp },
                     config
                 );
