@@ -17,6 +17,7 @@ import UpdateGroupChatModal from "./Miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
 // const ENDPOINT = "http://localhost:3001";
 const ENDPOINT = "https://chatappbackend-uqkv.onrender.com";
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -58,7 +59,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `${BASE_URL}/api/message/${selectedChat._id}`,
         config
       );
       setMessages(data);
@@ -90,7 +91,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         setNewMessage("");
         setPic('')
         const { data } = await axios.post(
-          "/api/message",
+          `${BASE_URL}/api/message`,
           {
             content: newMessage,
             chatId: selectedChat,

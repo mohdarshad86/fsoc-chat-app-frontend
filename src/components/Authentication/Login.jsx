@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
+
 const Login = () => {
     const [show, setShow] = useState(false);
     const handleClick = () => setShow(!show);
@@ -81,7 +82,7 @@ const Login = () => {
                 };
 
                 const { data } = await axios.post(
-                    "/api/user/verifyOTP",
+                    `${BASE_URL}/api/user/verifyOTP`${BASE_URL},
                     { phone, enteredOTP: otp },
                     config
                 );
@@ -144,7 +145,7 @@ const Login = () => {
             };
 
             const { data } = await axios.post(
-                "/api/user/login",
+                `${BASE_URL}/api/user/login`,
                 { email, password },
                 config
             );

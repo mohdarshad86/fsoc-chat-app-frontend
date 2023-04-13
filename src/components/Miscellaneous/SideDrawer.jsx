@@ -31,6 +31,7 @@ import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../UserAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
 import ProfileModal from "../Miscellaneous/ProfileModal";
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 
 function SideDrawer() {
   const [search, setSearch] = useState("");
@@ -77,7 +78,7 @@ function SideDrawer() {
         },
       };
 
-      const { data } = await axios.get(`/api/users?search=${search}`, config);
+      const { data } = await axios.get(`${BASE_URL}/api/users?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
@@ -103,7 +104,7 @@ function SideDrawer() {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(`/api/chat`, { userId }, config);
+      const { data } = await axios.post(`${BASE_URL}/api/chat`, { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
 

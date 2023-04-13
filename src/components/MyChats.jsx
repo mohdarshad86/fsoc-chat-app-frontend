@@ -10,6 +10,7 @@ import ChatLoading from "./ChatLoading";
 import { ChatState } from "../Context/ChatProvider";
 import { Button } from "@chakra-ui/react";
 import GroupChatModal from "./Miscellaneous/GroupChatModal";
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
@@ -19,7 +20,7 @@ const MyChats = ({ fetchAgain }) => {
   const toast = useToast();
 
   const fetchChats = async () => {
-    
+
     try {
 
       const config = {
@@ -28,8 +29,8 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
-      
+      const { data } = await axios.get(`${BASE_URL}/api/chat`, config);
+
       setChats(data);
     } catch (error) {
       toast({

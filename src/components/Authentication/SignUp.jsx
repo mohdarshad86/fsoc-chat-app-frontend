@@ -2,6 +2,7 @@ import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, V
 import React, { useState } from 'react'
 import { useHistory } from "react-router";
 import axios from 'axios'
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 
 const SignUp = () => {
 
@@ -48,7 +49,7 @@ const SignUp = () => {
                     "Content-type": "application/json",
                 },
             };
-            const { data } = await axios.post("/api/user",
+            const { data } = await axios.post(`${BASE_URL}/api/user`,
                 {
                     name,
                     email,
