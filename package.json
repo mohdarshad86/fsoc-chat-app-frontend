@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://chatappbackend-uqkv.onrender.com",
+  "homepage": "https://kajalrana18.github.io/fsoc-chat-app-frontend",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
     "@chakra-ui/react": "^1.6.2",
