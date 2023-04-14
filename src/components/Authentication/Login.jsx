@@ -2,7 +2,7 @@ import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, V
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
+const BASE_URL = "https://fsoc-backend.onrender.com"
 
 const Login = () => {
     const [show, setShow] = useState(false);
