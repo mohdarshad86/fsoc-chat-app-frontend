@@ -31,7 +31,7 @@ import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../UserAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
 import ProfileModal from "../Miscellaneous/ProfileModal";
-const BASE_URL = "https://chatappbackend-uqkv.onrender.com/"
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 
 function SideDrawer() {
   const [search, setSearch] = useState("");

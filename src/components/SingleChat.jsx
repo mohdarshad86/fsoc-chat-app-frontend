@@ -16,8 +16,8 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./Miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
 // const ENDPOINT = "http://localhost:3001";
-const ENDPOINT = "https://chatappbackend-uqkv.onrender.com/";
-const BASE_URL = "https://chatappbackend-uqkv.onrender.com/"
+const ENDPOINT = "https://chatappbackend-uqkv.onrender.com";
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {

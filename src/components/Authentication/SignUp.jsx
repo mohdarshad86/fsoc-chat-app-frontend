@@ -2,7 +2,7 @@ import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, V
 import React, { useState } from 'react'
 import { useHistory } from "react-router";
 import axios from 'axios'
-const BASE_URL = "https://chatappbackend-uqkv.onrender.com/"
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 
 const SignUp = () => {
 

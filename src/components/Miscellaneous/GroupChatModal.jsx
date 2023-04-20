@@ -18,7 +18,7 @@ import { useState } from "react";
 import { ChatState } from "../../Context/ChatProvider";
 import UserBadgeItem from "../UserAvatar/UserBadgeItem";
 import UserListItem from "../UserAvatar/UserListItem";
-const BASE_URL = "https://chatappbackend-uqkv.onrender.com/"
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 
 const GroupChatModal = ({ children }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();

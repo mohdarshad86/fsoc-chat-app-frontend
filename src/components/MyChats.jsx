@@ -10,7 +10,7 @@ import ChatLoading from "./ChatLoading";
 import { ChatState } from "../Context/ChatProvider";
 import { Button } from "@chakra-ui/react";
 import GroupChatModal from "./Miscellaneous/GroupChatModal";
-const BASE_URL = "https://chatappbackend-uqkv.onrender.com/"
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com"
 
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
