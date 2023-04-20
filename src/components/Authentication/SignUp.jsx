@@ -2,7 +2,7 @@ import { Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, V
 import React, { useState } from 'react'
 import { useHistory } from "react-router";
 import axios from 'axios'
-const BASE_URL = "https://fsoc-backend.onrender.com"
+const BASE_URL = "https://chatappbackend-uqkv.onrender.com/"
 
 const SignUp = () => {
 
@@ -70,7 +70,7 @@ const SignUp = () => {
             localStorage.setItem("userInfo", JSON.stringify(data));
             setPicLoading(false);
             history.push("/chats");
-             window.location.reload();
+            window.location.reload();
         } catch (error) {
             toast({
                 title: "Error Occured!",
